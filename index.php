@@ -19,18 +19,28 @@
                               </div>
                               <div class="panel-body">
                                   <div class="row">
-                                      <div class="col-md-6">
+                                
+                                      <div class="col-md-5">
                                           <label for="">Numero 1</label>
                                           <input type="number" value="" class="form-control" name="numero1" id="numero1" required>
                                       </div>
                                     
-                                      <div class="col-md-6">
+                                      <div class="col-md-5">
                                           <label for="">Numero 2</label>
                                           <input type="number" value="" class="form-control" name="numero2" id="numero1" required>
                                       </div>
+                                      <div class="col-md-2">
+                                          <label for="">Operacion.</label>
+                                          <select name="" id="" class="form-control">
+                                              <option value="">+</option>
+                                              <option value="">-</option>
+                                              <option value="">*</option>
+                                              <option value="">/</option>
+                                          </select>
+                                      </div>
                                   </div>
                                   <hr>
-                                   <button type="submit" class="btn btn-primary pull-right">Sumar</button>
+                                   <button type="submit" class="btn btn-primary pull-right">Operar</button>
                                 </div>
                           </div>
                       </div>
@@ -43,7 +53,7 @@
            <div class="row">
                <div class="col-md-8 col-md-offset-2">
                   <div class="alert alert-success">
-                    El resultado de la suma es: <strong>resultado</strong>
+                    El resultado de la "Suma/resta/multiplicacion/division" es : <strong>"resultado"</strong>
                   </div>
                </div>
            </div>
