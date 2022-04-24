@@ -22,20 +22,20 @@
                                 
                                       <div class="col-md-5">
                                           <label for="">Numero 1</label>
-                                          <input type="number" value="" class="form-control" name="numero1" id="numero1" required>
+                                          <input type="number" value="<?php print($_GET['numero1']) ?>" class="form-control" name="numero1" id="numero1" required>
                                       </div>
                                     
                                       <div class="col-md-5">
                                           <label for="">Numero 2</label>
-                                          <input type="number" value="" class="form-control" name="numero2" id="numero1" required>
+                                          <input type="number" value="<?php print($_GET['numero2']) ?>" class="form-control" name="numero2" id="numero1" required>
                                       </div>
                                       <div class="col-md-2">
                                           <label for="">Operacion.</label>
-                                          <select name="" id="" class="form-control">
-                                              <option value="">+</option>
-                                              <option value="">-</option>
-                                              <option value="">*</option>
-                                              <option value="">/</option>
+                                          <select name="operacion" id="operacion" class="form-control">
+                                              <option value="sumar">+</option>
+                                              <option value="restar">-</option>
+                                              <option value="multiplicar">*</option>
+                                              <option value="dividir">/</option>
                                           </select>
                                       </div>
                                   </div>
@@ -53,7 +53,32 @@
            <div class="row">
                <div class="col-md-8 col-md-offset-2">
                   <div class="alert alert-success">
-                    El resultado de la "Suma/resta/multiplicacion/division" es : <strong>"resultado"</strong>
+                <?php
+                
+                 $numero1 = $_GET['numero1'];
+                 $numero2 = $_GET['numero2'];
+                 $operacion = $_GET['operacion'];
+                 $resultado = 0;
+
+                if($operacion == 'sumar'){
+                    $resultado = $numero1 + $numero2;
+                } 
+                else if($operacion == 'restar'){
+                    $resultado = $numero1 - $numero2;
+                } 
+                else if($operacion == 'multiplicar'){
+                    $resultado = $numero1 * $numero2;
+                } 
+                else if($operacion == 'dividir'){
+                    $resultado = $numero1 / $numero2;
+                }else{
+                    $resultado = "Existen errores en la operacion";
+                }         
+                ?>
+          
+
+
+                    El resultado de la <?php print ($operacion) ?> es : <strong><?php print($resultado) ?></strong>
                   </div>
                </div>
            </div>
